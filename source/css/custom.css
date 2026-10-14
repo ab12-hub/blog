@@ -1,0 +1,108 @@
+/* whatoppt's Blog — custom styles (teal theme) */
+
+/* 首页大标题：青色渐变字 */
+#page-header #site-title {
+  background: linear-gradient(120deg, #5eead4, #2dd4bf 45%, #a7f3d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* 首页副标题打字机光标 */
+#page-header #site-subtitle .typed-cursor {
+  color: #5eead4;
+}
+
+/* 首页文章卡片：悬停上浮 */
+#recent-posts > .recent-post-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(13, 148, 136, 0.16);
+}
+#recent-posts > .recent-post-item .post_cover img.post_bg {
+  transition: transform 0.6s ease;
+}
+#recent-posts > .recent-post-item:hover .post_cover img.post_bg {
+  transform: scale(1.05);
+}
+
+/* 侧栏头像：青色光环 */
+#aside-content .card-info .author-info__avatar img,
+#aside-content .card-info .avatar-img img {
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.4);
+}
+
+/* 引用块：贴合主题色 */
+#article-container blockquote {
+  border-left: 4px solid #0d9488;
+  background: rgba(13, 148, 136, 0.06);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 行内代码 */
+#article-container p code,
+#article-container li code {
+  color: #0f766e;
+  background: rgba(13, 148, 136, 0.09);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+/* 表格表头 */
+#article-container table thead {
+  background: rgba(13, 148, 136, 0.12);
+}
+
+/* 文章标题悬停 */
+#article-container h1:hover .headerlink,
+#article-container h2:hover .headerlink,
+#article-container h3:hover .headerlink {
+  color: #0d9488;
+}
+
+/* 选中文本 */
+::selection {
+  background: #5eead4;
+  color: #134e4a;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+  background: #0d9488;
+  border-radius: 8px;
+}
+
+/* 页脚 */
+#footer {
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0.05), transparent);
+}
+#footer a {
+  color: #14b8a6;
+}
+
+/* 归档页：年份标题 */
+.article-sort-title {
+  color: #0f766e;
+}
+
+/* 标签页标签悬停 */
+.tag-cloud-list a:hover {
+  color: #0d9488 !important;
+  transform: scale(1.06);
+}
+
+/* 夜间模式微调 */
+[data-theme='dark'] #page-header #site-title {
+  background: linear-gradient(120deg, #5eead4, #2dd4bf 45%, #99f6e4);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+[data-theme='dark'] #article-container blockquote {
+  background: rgba(45, 212, 191, 0.08);
+}
